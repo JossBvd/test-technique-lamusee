@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
-        <link rel="stylesheet" type="text/css" href="{{ asset('style.css') }}">
-        <title>{% block title %}Test technique | L'Amusée Paris{% endblock %}</title>
-        {% block javascripts %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>"> {% block stylesheets %}{% endblock %}
+		{{ encore_entry_link_tags('app') }}
+		<link
+		rel="stylesheet" type="text/css" href="{{ asset('style.css') }}">
+		{# cdn font awesome #}
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		<title>
+			{% block title %}Test technique | L'Amusée Paris
+			{% endblock %}
+		</title>
+		{% block javascripts %}{% endblock %}
+		{{ encore_entry_script_tags('app') }}
+	</head>
+	<body>
+		<header class="">
+			<nav class="flex flex-col md:flex-row flex-wrap justify-around bg-[#fbf9f4]">
+				{# logo #}
+				<div class="py-2">
+					<a href="#" class="text-center">
+						<img class="ml-2 md:ml-0" src={{ asset('assets/img/logo.png') }} alt="logo">
+					</a>
+				</div>
+				{# lien text #}
+				<div class="flex justify-center mb-7 md:mb-0">
+					<ul class="flex flex-col sm:flex-row sm:gap-10 md:items-center">
+						<li><a href="#">La Mariée</a></li>
+						<li><a href="#">Robes en couleur</a></li>
+						<li><a href="#">La Maison</a></li>
+						<li><a href="#">Rendez-vous/Boutique</a></li>
+					</ul>
+				</div>
+				{# lien icon #}
+				<div class="flex justify-center">
+					<ul class="flex gap-6 md:gap-3 justify-center md:items-center">
+						<li><a href="#"><i class="fa-regular fa-user"></i></a></li>
+						<li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li>
+						<li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		{% block body %}{% endblock %}
+	</body>
 </html>

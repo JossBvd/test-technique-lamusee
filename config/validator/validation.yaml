@@ -1,0 +1,20 @@
+App\Entity\Image:
+   properties:
+    texte:
+      - NotNull: ~
+      - NotBlank: ~
+      - Type:
+          type: string
+          message: La valeur {{ value }} n'est pas un {{ type }} valide
+      - Length:
+          max: 255
+          maxMessage: "Le texte ne peut pas être plus grand que {{ limit }} caractère"
+    url:
+      - NotNull: ~
+      - NotBlank: ~
+      - Type:
+          type: string
+          message: La valeur {{ value }} n'est pas un {{ type }} valide
+      - Length:
+          max: 255
+          maxMessage: "L'url ne peut pas être plus grand que {{ limit }} caractère"
