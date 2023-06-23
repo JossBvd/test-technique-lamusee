@@ -2,4 +2,25 @@
 
 {% block body %}
 
+	<main>
+		<section class='mt-6 md:mt-0 relative'>
+			<div class="absolute w-full h-full top-0 flex justify-center items-center">
+				<h1 class="text-white text-[6vw] font-thin tracking-wide">Nos Clientes</h1>
+			</div>
+			<img class="w-full" src={{ asset('assets/img/banner.png') }} alt="banniere">
+		</section>
+		<section class="flex flex-col items-center flex-wrap lg:flex-row lg:justify-center gap-10 m-10 ">
+			{% for image in images %}
+				<div class="relative flex justify-center group">
+					<img class="h-[330px] min-w-[330px] object-cover transition group-hover:bg-black" src={{image.url}} alt="photo mariage">
+					<div class="absolute z-30 flex w-full h-full justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+						<p class="text-white font-thin text-center text-sm font-serif p-4">{{ image.texte }}</p>
+					</div>
+					{# div effet assombrissement #}
+					<div class="absolute z-20 h-full w-full bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+				</div>
+			{% endfor %}
+		</section>
+	</main>
 {% endblock %}
+

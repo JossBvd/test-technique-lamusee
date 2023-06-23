@@ -17,7 +17,8 @@
 	</head>
 	<body>
 		<header class="">
-			<nav class="flex flex-col md:flex-row flex-wrap justify-around bg-[#fbf9f4]">
+			<nav
+				class="flex flex-col md:flex-row flex-wrap justify-around bg-[#fbf9f4]">
 				{# logo #}
 				<div class="py-2">
 					<a href="#" class="text-center">
@@ -27,22 +28,79 @@
 				{# lien text #}
 				<div class="flex justify-center mb-7 md:mb-0">
 					<ul class="flex flex-col sm:flex-row sm:gap-10 md:items-center">
-						<li><a href="#">La Mariée</a></li>
-						<li><a href="#">Robes en couleur</a></li>
-						<li><a href="#">La Maison</a></li>
-						<li><a href="#">Rendez-vous/Boutique</a></li>
+						<li>
+							<a href="#">La Mariée</a>
+						</li>
+						<li>
+							<a href="#">Robes en couleur</a>
+						</li>
+						<li>
+							<a href="#">La Maison</a>
+						</li>
+						<li>
+							<a href="#">Rendez-vous/Boutique</a>
+						</li>
 					</ul>
 				</div>
 				{# lien icon #}
 				<div class="flex justify-center">
 					<ul class="flex gap-6 md:gap-3 justify-center md:items-center">
-						<li><a href="#"><i class="fa-regular fa-user"></i></a></li>
-						<li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li>
-						<li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+						<li>
+							<a href="#">
+								<i class="fa-regular fa-user"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa-solid fa-bag-shopping"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</nav>
 		</header>
 		{% block body %}{% endblock %}
+
+		<footer class="bg-[#efefef] w-full flex flex-col sm:flex-row sm:justify-evenly text-sm p-5 gap-6">
+			<div>
+				<ul class="flex flex-col gap-2">
+					<li class="uppercase font-bold mb-4">La Marieé</li>
+					<li>Cérémonie</li>
+					<li>Civil</li>
+					<li>Accessoire</li>
+					<li>Seconde Main</li>
+				</ul>
+			</div>
+			<div>
+				<ul class="flex flex-col gap-2">
+					<li class="uppercase font-bold mb-4">Robes en Couleur</li>
+					<li>Collection 2022</li>
+					<li>Seconde main couleru</li>
+					<li>Intemporels</li>
+				</ul>
+			</div>
+			<div>
+				<ul class="flex flex-col gap-2">
+					<li class="uppercase font-bold mb-4">La Maison</li>
+					<li>Nous</li>
+					<li>Blog</li>
+					<li>FAQ</li>
+					<li>Contact</li>
+				</ul>
+			</div>
+			<div>
+				<ul class="flex flex-col gap-2">
+					<li class="uppercase font-bold mb-4">Rendez-vous / Boutique</li>
+					<li>Prise de rendez-vous au showroom</li>
+					<li>Sur-Mesure</li>
+					<li>Essayage Virtuel</li>
+				</ul>
+			</div>
+		</footer>
 	</body>
 </html>
